@@ -1,1 +1,46 @@
-#Initial HTML Commit
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet" />
+    <title>Paris Webcams</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Paris Webcams</h1>
+      <h2 id="place"></h2>
+
+      <div id="video">
+        <video
+          id="hls-example"
+          class="video-js vjs-default-skin"
+          controls
+          preload="auto"
+          autoplay
+          loop
+        >
+          <source id="sourceUrl" type="application/x-mpegURL" />
+        </video>
+      </div>
+
+      <div id="buttons">
+        <button id="previous" class="button">Previous</button>
+        <button id="next" class="button">Next</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+
+    <!--     <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script> -->
+    <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+    <script src="vhs/videojs-http-streaming.min.js"></script>
+    <script src="vhs/videojs-http-streaming-sync-workers.js"></script>
+    <script>
+      var player = videojs('hls-example');
+      player.play();
+    </script>
+  </body>
+</html>

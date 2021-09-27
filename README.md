@@ -1,3 +1,3 @@
-#Vanilla-JS-Development-#1
+#Vanilla-JS-Development-#1: Paris Webcams
 
-<h3>Playground for strict Vanilla JS (no jQuery)</h3>
+<h3>Simple Parisian Webcam Selector</h3>
