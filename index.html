@@ -1,1 +1,54 @@
-#Initial HTML Commit
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+  />
+  <meta
+    name="author"
+    content="Pierre Andr&eacute; Lowenstein - coder@pierreandrelowenstein.com"
+  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet" />
+    <title>Paris Webcams [2021-09-27]</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Paris Webcams</h1>
+      <h2 id="place"></h2>
+
+      <div id="video">
+        <video
+          id="hls-example"
+          class="video-js vjs-default-skin"
+          controls
+          preload="auto"
+          autoplay
+          loop
+        >
+          <source id="sourceUrl" />
+        </video>
+      </div>
+
+      <div id="buttons">
+        <button id="previous" class="button">Previous</button>
+        <button id="next" class="button">Next</button>
+      </div>
+    </div>
+
+    <!-- use "app-m3u8.js" below if using the m3u8 version -->
+    <script src="app-mp4.js"></script>
+    <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+    <script src="assets/js-vhs/videojs-http-streaming.min.js"></script>
+    <script src="assets/js-vhs/videojs-http-streaming-sync-workers.js"></script>
+    <script>
+      var player = videojs('hls-example');
+      player.play();
+    </script>
+  </body>
+</html>
