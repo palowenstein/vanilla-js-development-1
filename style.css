@@ -1,39 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background-color: rgba(68, 108, 179, 1);
-  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-color: rgba(68, 108, 179, 1);
+  font-family: 'Open Sans', sans-serif;
   min-height: 100vh;
-  margin: 0;
+  margin: 20px; /* Applies 20px blue margin to container(s) below */
 }
 
-.container {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  width: 440px;
+/* * {
+  box-sizing: border-box;
+} */
+
+
+@media (min-width: 468px) {
+  .container-1 {
+    display: flex; /* Indique direction horizontale par défaut*/
+    /*
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: stretch; /* valeur par défaut
+    flex-direction: column; **valide direction verticale**
+    */
+    background-color: #fff;
+    flex-basis: 100%;
+    align-items: center; /* Regroupe les 3 boites sur un même axe horizontal */
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+/* .container-1 div {
+  border: 1px #ccc solid;
+} */
+
+.box-1 {
+  flex: 1;
+  order: 1;
+  flex-basis: 35%;
+  border: 1px #ccc solid;
+}
+.box-2 {
+  flex: 1;
+  order: 2;
+  flex-basis: 30%;
+  border: 1px #ccc solid;
+}
+.box-3 {
+  flex: 1;
+  order: 3;
+  flex-basis: 35%;  
+  border: 1px #ccc solid;
 }
 
 h1 {
   text-align: center;
-  margin: 0px;
-  display: block;
-  width: 100%;
-  padding: 10px;
+  border: 1px solid blue;
+  margin: 0;
+  padding: 10px 5px;
 }
 
 h2 {
+  border: 1px solid red;
   text-align: center;
-  margin: 0px 0px 20px 0px;
-  display: block;
-  width: 100%;
+  margin: 0px 0px 0px 0px;
   padding: 10px 5px;
 }
 
@@ -48,11 +81,7 @@ h2 {
 }
 
 #buttons {
-  text-align: center;
-  display: block;
-  width: 100%;
   padding: 10px;
-  font-size: 14px;
 }
 
 button {
